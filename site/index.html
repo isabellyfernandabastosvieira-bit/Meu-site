@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor de Pizza - A Melhor de Nova Lima</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container nav-bar">
+            <div class="logo">
+                <img src="image-removebg-preview (1).png" alt="Sabor de Pizza Logo">
+                <span>Sabor de Pizza</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#peca-agora" class="btn-pedido-nav">🍕 Peça Agora!</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="carousel-container">
+            
+            <div class="carousel-slide fade">
+                <img src="img3.png" alt="Pizza de Bacon com Alho-Poró" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Massa de Fermentação Lenta</h2>
+                    <p>A leveza e o sabor que você só encontra aqui em Nova Lima.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide fade">
+                <img src="img1.png" alt="Fachada da Sabor de Pizza" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Tradição e Qualidade</h2>
+                    <p>Mais de 10 anos servindo as melhores pizzas da região.</p>
+                </div>
+            </div>
+
+            <div class="carousel-slide fade">
+                <img src="img2.png" alt="Pizza Doce de Kit-Kat" class="carousel-image">
+                <div class="carousel-caption">
+                    <h2>Para a Sobremesa: Pizza Prestígio!</h2>
+                    <p>A famosa Pizza de Prestígio. Irresistível!</p>
+                </div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <div style="text-align:center; padding: 15px;">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <section class="section-destaque">
+        <div class="container">
+            <div class="destaque-item">
+                <i class="fas fa-hand-holding-heart"></i>
+                <h3>Ingredientes Frescos</h3>
+                <p>Molho caseiro, sem conservantes, com tomates selecionados</p>
+            </div>
+            <div class="destaque-item">
+                <i class="fas fa-fire-alt"></i>
+                <h3>Forno a Lenha</h3>
+                <p>O toque defumado e a crocância perfeita em cada borda</p>
+            </div>
+            <div class="destaque-item">
+                <i class="fas fa-truck"></i>
+                <h3>Delivery Rápido</h3>
+                <p>Sua pizza quente e deliciosa entregue na porta da sua casa</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cardapio" class="section-cardapio">
+        <div class="container">
+            <h2><i class="fas fa-book-open"></i> Nosso Cardápio Completo (Todas as pizzas gigantes acompanham bebida grátis).</h2>
+            
+            <div class="categoria">
+                <h3>Pizzas Tradicionais </h3>
+                <div class="menu-grid">
+                    <div class="item-cardapio">
+                        <h4>Americana</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, calabresa, molho barbecue e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Mussarela</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Napolitana</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, tomate, champignon, alho frito e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Presunto</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, presunto fatiado e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Presunto com Cheddar</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, presunto fatiado, cheddar e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>4 Queijos</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, gorgonzola, catupiry, queijo parmesão ralado e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Calabresa</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, calabresa fatiada, cebola e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Frango com Catupiry</h4>
+                       <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, frango desfiado, catupiry e orégano)</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Milho e Bacon</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, milho, bacon e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Portuguesa</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho do tomate, mussarela, calabresa, azeitona preta, cebola, ovo e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>À Moda</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, calabresa, presunto, azeitona verde, pimentão, cebola e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>4 Carnes</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, calabresa fatiada, lombinho fatiado, presunto fatiado, bacon, cebola e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Pepperoni</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p>Molho de tomate, mussarela, pepperoni e orégano</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h3>Pizzas Especiais </h3>
+                <div class="menu-grid">
+                    <div class="item-cardapio">
+                        <h4>Marguerita</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, tomate fatiado, majericão e orégano </p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Presunto Parma </h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p> Molho de tomate, mussarela, presunto parma Ceratti, tomate cereja, rúcula e orégano </p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Speciali</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p>Molho de tomate, mussarela, peito de peru, cream cheese, geléia de amora, majericão e orégano </p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Frango à Bolonhesa</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, frango desfiado, molho à bolonhesa e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Palmito</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, palmito e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Palmito à Bolonhesa</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, palmito, molho à bolonhesa e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Vegetariana</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, champignon, milho, palmito, azeitona verde, cebola, tomate, pimentão e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Atum</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, atum, cebola, azeitona preta e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Lombo Canadense</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, lombinho canadense e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Tomate Seco</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Molho de tomate, mussarela, tomate seco, majericão e oréganoo</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Indiana</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, pepperoni, especiarias e mel</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Milhombo</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p> Molho de tomate, mussarela, lombinho canadense, milho, catupiry e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Bubuta</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p> Molho de tomate, mussarela, champignon, cebola, calabresa, catupiry, cebolinha, pimenta biquinho e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Bacutia</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p>Molho de tomate, mussarela, peito de peru defumado, champignon, provolone, cebola, azeitona preta e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Mediterrânea</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p> Molho de tomate, mussarela, azeitona preta, champignon, tomate seco, majericão e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Nordestina</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p>Molho de tomate, mussarela, carne seca desfiada, cebola, catupiry, cebolinha e orégano</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Catuperoni</h4>
+                        <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p>Molho de tomate, mussarela, catupiry e pepperoni</p>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="categoria">
+                <h3>Pizzas Doces </h3>
+                <div class="menu-grid">
+                    <div class="item-cardapio">
+                        <h4>Prestígio</h4>
+                         <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p>Creme de chocolate com avelã e coco ralado.</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Brigadeiro com Morangos</h4>
+                         <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Creme de chocolate, chocolate granulado e morangos. </p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Sonho de Valsa</h4>
+                        <p>M(6)-47,90 / G(8)-57,90 / GG(12)-68,90</p>
+                        <p>Creme de chocolate e raspas de Sonho de Valsa. </p>
+                    </div>
+                     <div class="item-cardapio">
+                        <h4>Duo</h4>
+                         <p>M(6)-51,90 / G(8)-61,90 / GG(12)-72,90</p>
+                        <p> Creme de chocolate com avelã, chocolate branco e raspas de bombom ouro branco.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="categoria">
+                <h3>Bebidas </h3>
+                <div class="menu-grid">
+                    <div class="item-cardapio">
+                        <h4>Coca Cola 2L</h4>
+                        <p>12,90</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Sukita 2L</h4>
+                        <p>9,00</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Kuat 2L</h4>
+                        <p>9,00</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Soda Limonada 2L</h4>
+                        <p>9,00</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Guaraná Antártica 2L</h4>
+                        <p>11,90</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Coca Cola Lata (350ml)</h4>
+                        <p>5,00</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Suco Tial (Sabores)</h4>
+                        <p>8,00</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Cerveja Heineken</h4>
+                        <p>12,90</p>
+                    </div>
+                </div>
+            </div>
+
+             <div class="categoria">
+                <h3>Especiais </h3>
+                <div class="menu-grid">
+                    <div class="item-cardapio">
+                        <h4>Borda Recheada</h4>
+                         <p>M(6)-10,00 / G(8)-11,00/ GG(12)-12,00</p>
+                        <p>Borda de catupiry, cheddar ou cream cheese</p>
+                    </div>
+                    <div class="item-cardapio">
+                        <h4>Brownie Artesanal</h4>
+                        <p>7,50</p>
+                    </div>
+                </div>
+            </div>
+
+            
+        </div>
+    </section>
+
+    <section id="sobre" class="section-sobre">
+        <div class="container">
+            <h2><i class="fas fa-store"></i> Sobre a Sabor de Pizza</h2>
+            <div class="content-sobre">
+                <div class="sobre-texto">
+                    <p>Fundada em Nova Lima, a Sabor de Pizza nasceu de um sonho: trazer a verdadeira pizza artesanal para a nossa comunidade. Nossa filosofia é simples: massa de longa fermentação, que garante leveza e digestibilidade, e ingredientes da mais alta qualidade.</p>
+                    <p>Nosso molho de tomate é 100% caseiro, feito diariamente sem conservantes. É o coração da nossa pizza! Desde 2018, cada pizza que sai do nosso forno é feita com carinho e paixão, mantendo a tradição e o sabor que conquistou Nova Lima.</p>
+                    <p>Venha fazer parte da nossa história! Estamos na Rua Vila Maria, 99 - Retiro.</p>
+                </div>
+                <div class="sobre-imagem">
+                    <img src="img4.png" alt="Imagem da cozinha ou do ambiente da pizzaria.">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="peca-agora" class="section-cta">
+        <div class="container">
+            <h2>Pronto para pedir a melhor pizza de Nova Lima?</h2>
+            <p>Clique abaixo, peça pelo ifood e garanta já o seu jantar! Aceitamos cartões, PIX e dinheiro.</p>
+            <a href="https://www.ifood.com.br/delivery/nova-lima-mg/sabor-de-pizza-retiro/8f4858e8-fc16-4210-bbd9-68201772816e?UTM_Medium=share" target="_blank" class="btn-pedido-grande">
+                <i class="fas fa-shopping-basket"></i> QUERO MINHA PIZZA AGORA!
+            </a>
+            <p class="horario-cta">Funcionamento: Terça a Domingo, das 18:00h às 23:30h</p>
+        </div>
+    </section>
+
+
+    <section id="contato" class="section-contato">
+        <div class="container">
+            <h2><i class="fas fa-map-marker-alt"></i> Fale Conosco</h2>
+            <div class="contato-grid">
+                <div class="info-contato">
+                    <h3>Informações</h3>
+                    <p><i class="fas fa-phone"></i> Telefone: (31) 3694-4001</p>
+                    <p><i class="fab fa-whatsapp"></i> WhatsApp: (31) 9 9590-4002</p>
+                    <p><i class="fas fa-clock"></i>Horário: Terça-Feira à Quinta-Feira - 18:10 às 23:00 // Sexta-Feira à Domingo - 18:10 às 23:30</p>
+                    <p><i class="fas fa-map-pin"></i> Endereço: Rua Vila Maria, 99 - Retiro, Nova Lima - MG</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/sabordepizzanl?igsh=djB0MTI3MHVocXMw" target="_blank"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="mapa">
+                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15024.975390632616!2d-43.8569805953041!3d-20.00760410657905!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4e13!4m0!3e0!5m2!1spt-BR!2sbr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Dúvidas ou Sugestões?</h3>
+                <form action="#" method="POST" class="form-contato">
+                    <input type="text" placeholder="Seu Nome Completo" required>
+                    <input type="email" placeholder="Seu E-mail" required>
+                    <textarea placeholder="Sua Mensagem..." rows="5" required></textarea>
+                    <button type="submit" class="btn-principal"><i class="fas fa-paper-plane"></i> Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Sabor de Pizza - Nova Lima. Todos os direitos reservados. | Desenvolvido com Paixão e Código.</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          let i;
+          let slides = document.getElementsByClassName("carousel-slide");
+          let dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,386 @@
+/* Importação das Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&family=Playfair+Display:wght@700&display=swap');
+
+/* VARIÁVEIS DE DESIGN */
+:root {
+    --cor-principal: #C70039; /* Vermelho Pizza Escuro */
+    --cor-secundaria: #FFC300; /* Amarelo Queijo/Ouro */
+    --cor-acento: #3B71CA; 
+    --cor-fundo-claro: #F8F8F8;
+    --cor-fundo-escuro: #212121;
+    --cor-texto-escuro: #333;
+    --cor-texto-claro: #FFF;
+    --fonte-titulo: 'Playfair Display', serif; 
+    --fonte-corpo: 'Roboto', sans-serif; 
+}
+
+/* RESET E BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto-escuro);
+    background-color: var(--cor-fundo-claro);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* UTILITÁRIOS */
+.container {
+    width: 90%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+h2 {
+    font-family: var(--fonte-titulo);
+    font-size: 3em;
+    text-align: center;
+    color: var(--cor-principal);
+    margin-bottom: 40px;
+}
+h3 {
+    font-family: var(--fonte-titulo);
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* BOTÕES ESTILIZADOS */
+a.btn-principal, a.btn-pedido-nav, button.btn-principal, a.btn-pedido-grande {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: var(--cor-secundaria);
+    color: var(--cor-texto-escuro);
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 50px; 
+    transition: all 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+a.btn-principal:hover, a.btn-pedido-nav:hover, button.btn-principal:hover, a.btn-pedido-grande:hover {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* CABEÇALHO (STICKY NAV) */
+header {
+    background-color: var(--cor-fundo-escuro);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    height: 50px; 
+}
+
+.logo span {
+    color: var(--cor-texto-claro);
+    font-family: var(--fonte-titulo);
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    padding: 10px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+nav ul a:hover {
+    color: var(--cor-secundaria);
+}
+
+.btn-pedido-nav {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+}
+
+/* CARROSSEL DE IMAGENS */
+.carousel-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-slide {
+    display: none;
+    height: 650px; 
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    color: var(--cor-texto-claro);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.carousel-caption h2 {
+    color: var(--cor-texto-claro);
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: var(--cor-principal);
+}
+
+/* SEÇÃO DE DESTAQUE */
+.section-destaque {
+    padding: 40px 0;
+    background-color: var(--cor-principal);
+    color: var(--cor-texto-claro);
+}
+
+.section-destaque .container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    gap: 30px;
+}
+
+.destaque-item i {
+    font-size: 3em;
+    color: var(--cor-secundaria);
+}
+
+/* SEÇÃO CARDÁPIO */
+.section-cardapio {
+    padding: 60px 0;
+}
+
+.categoria {
+    margin-bottom: 40px;
+    border: 1px solid #EEE;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: var(--cor-texto-claro);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.categoria h3 {
+    color: var(--cor-principal);
+    border-left: 5px solid var(--cor-secundaria);
+    padding-left: 15px;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+/* SEÇÃO SOBRE NÓS */
+.section-sobre {
+    padding: 60px 0;
+    background-color: var(--cor-fundo-claro);
+}
+
+.content-sobre {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-texto {
+    flex: 2;
+    text-align: justify;
+}
+
+.sobre-imagem {
+    flex: 1;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.sobre-imagem img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+
+/* SEÇÃO PEÇA AGORA (CTA) */
+.section-cta {
+    background: var(--cor-principal) url('https://via.placeholder.com/1920x400?text=Fundo+Textura+de+Massa') center/cover no-repeat;
+    background-attachment: fixed; 
+    color: var(--cor-texto-claro);
+    text-align: center;
+    padding: 80px 0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.section-cta h2 {
+    color: var(--cor-texto-claro);
+    font-size: 3.5em;
+}
+
+.btn-pedido-grande {
+    background-color: var(--cor-secundaria);
+    font-size: 1.6em;
+    padding: 20px 60px;
+    animation: pulse 2s infinite; 
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.03); }
+    100% { transform: scale(1); }
+}
+
+/* SEÇÃO CONTATO */
+.section-contato {
+    padding: 60px 0;
+    background-color: var(--cor-texto-claro);
+}
+
+.contato-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.info-contato {
+    background-color: var(--cor-fundo-claro);
+    padding: 25px;
+    border-radius: 8px;
+}
+
+.social-icons a {
+    color: var(--cor-principal);
+    font-size: 2em;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+.social-icons a:hover {
+    color: var(--cor-secundaria);
+}
+
+.form-contato input, .form-contato textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #CCC;
+    border-radius: 5px;
+    font-family: var(--fonte-corpo);
+}
+
+/* RODAPÉ */
+footer {
+    background-color: var(--cor-fundo-escuro);
+    color: #AAA;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 0.85em;
+}
+
+/* RESPONSIVIDADE (Para celular e tablet) */
+@media (max-width: 1024px) {
+    .nav-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .carousel-slide {
+        height: 500px;
+    }
+    .content-sobre, .contato-grid {
+        flex-direction: column;
+    }
+    .sobre-texto, .sobre-imagem {
+        flex: none;
+        width: 100%;
+    }
+}
